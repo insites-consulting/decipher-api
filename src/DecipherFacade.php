@@ -1,6 +1,6 @@
 <?php
 
-namespace MrDth\DecipherApi;
+namespace InsitesConsulting\DecipherApi;
 
 use Illuminate\Support\Facades\Facade;
 

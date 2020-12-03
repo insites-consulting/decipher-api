@@ -1,10 +1,10 @@
 <?php
 
-namespace MrDth\DecipherApi\Factories;
+namespace InsitesConsulting\DecipherApi\Factories;
 
 use GuzzleHttp\Client as HttpClient;
-use MrDth\DecipherApi\Exceptions\MissingApiKeyException;
-use MrDth\DecipherApi\Exceptions\MissingUriException;
+use InsitesConsulting\DecipherApi\Exceptions\MissingApiKeyException;
+use InsitesConsulting\DecipherApi\Exceptions\MissingUriException;
 
 class Client
 {

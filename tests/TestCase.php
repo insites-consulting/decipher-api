@@ -1,12 +1,11 @@
 <?php
 
 
-namespace MrDth\DecipherApi\Test;
+namespace InsitesConsulting\DecipherApi\Test;
 
 
-use MrDth\DecipherApi\DecipherFacade;
-use MrDth\DecipherApi\DecipherServiceProvider;
-
+use InsitesConsulting\DecipherApi\DecipherFacade;
+use InsitesConsulting\DecipherApi\DecipherServiceProvider;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
 class TestCase extends OrchestraTestCase

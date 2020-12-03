@@ -41,8 +41,7 @@ try {
 #### Usage as a standalone PHP Package
 
 ```php
-use MrDth\DecipherApi\Factories\Client;
-use MrDth\DecipherApi\Decipher;
+use InsitesConsulting\DecipherApi\Decipher;use InsitesConsulting\DecipherApi\Factories\Client;
 
 $api_uri = 'https://v2.decipherinc.com/api/v1/';
 $api_key = 'OBVIOUSLYFAKEAPIKEY';

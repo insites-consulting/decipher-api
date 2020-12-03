@@ -1,6 +1,6 @@
 <?php
 
-namespace MrDth\DecipherApi\Exceptions;
+namespace InsitesConsulting\DecipherApi\Exceptions;
 
 class MissingUriException extends \Exception
 {

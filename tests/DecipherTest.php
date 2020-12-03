@@ -7,13 +7,12 @@
  * @phpcs:disable PSR1.Methods.CamelCapsMethodName.NotCamelCaps
  */
 
-namespace MrDth\DecipherApi\Test;
+namespace InsitesConsulting\DecipherApi\Test;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
-use MrDth\DecipherApi\Decipher;
-use MrDth\DecipherApi\Factories\Api\SurveyList;
+use InsitesConsulting\DecipherApi\Decipher;
 
 class DecipherTest extends TestCase
 {

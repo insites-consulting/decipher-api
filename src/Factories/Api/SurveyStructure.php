@@ -1,9 +1,9 @@
 <?php
 
-namespace MrDth\DecipherApi\Factories\Api;
+namespace InsitesConsulting\DecipherApi\Factories\Api;
 
-use MrDth\DecipherApi\Exceptions\InvalidReturnFormatException;
-use MrDth\DecipherApi\Factories\Client;
+use InsitesConsulting\DecipherApi\Exceptions\InvalidReturnFormatException;
+use InsitesConsulting\DecipherApi\Factories\Client;
 
 class SurveyStructure
 {

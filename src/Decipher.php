@@ -1,14 +1,14 @@
 <?php
 
-namespace MrDth\DecipherApi;
+namespace InsitesConsulting\DecipherApi;
 
-use MrDth\DecipherApi\Exceptions\ServerDirectoryNotSetException;
-use MrDth\DecipherApi\Exceptions\SurveyIdNotSetException;
-use MrDth\DecipherApi\Factories\Api\SurveyData;
-use MrDth\DecipherApi\Factories\Api\SurveyFile;
-use MrDth\DecipherApi\Factories\Api\SurveyList;
-use MrDth\DecipherApi\Factories\Api\SurveyStructure;
-use MrDth\DecipherApi\Factories\Client;
+use InsitesConsulting\DecipherApi\Exceptions\ServerDirectoryNotSetException;
+use InsitesConsulting\DecipherApi\Exceptions\SurveyIdNotSetException;
+use InsitesConsulting\DecipherApi\Factories\Api\SurveyData;
+use InsitesConsulting\DecipherApi\Factories\Api\SurveyFile;
+use InsitesConsulting\DecipherApi\Factories\Api\SurveyList;
+use InsitesConsulting\DecipherApi\Factories\Api\SurveyStructure;
+use InsitesConsulting\DecipherApi\Factories\Client;
 
 class Decipher
 {

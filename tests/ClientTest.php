@@ -7,11 +7,11 @@
  * @phpcs:disable PSR1.Methods.CamelCapsMethodName.NotCamelCaps
  */
 
-namespace MrDth\DecipherApi\Test;
+namespace InsitesConsulting\DecipherApi\Test;
 
-use MrDth\DecipherApi\Exceptions\MissingApiKeyException;
-use MrDth\DecipherApi\Exceptions\MissingUriException;
-use MrDth\DecipherApi\Factories\Client;
+use InsitesConsulting\DecipherApi\Exceptions\MissingApiKeyException;
+use InsitesConsulting\DecipherApi\Exceptions\MissingUriException;
+use InsitesConsulting\DecipherApi\Factories\Client;
 
 class ClientTest extends TestCase
 {

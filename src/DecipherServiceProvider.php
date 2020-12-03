@@ -1,9 +1,9 @@
 <?php
 
-namespace MrDth\DecipherApi;
+namespace InsitesConsulting\DecipherApi;
 
 use Illuminate\Support\ServiceProvider;
-use MrDth\DecipherApi\Factories\Client;
+use InsitesConsulting\DecipherApi\Factories\Client;
 
 class DecipherServiceProvider extends ServiceProvider
 {

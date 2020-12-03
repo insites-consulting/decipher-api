@@ -1,10 +1,10 @@
 {
-    "name": "mrdth/decipher-api",
+    "name": "insites-consulting/decipher-api",
     "description": "PHP Wrapper for the FocusVision Decipher REST Api ",
     "authors": [
         {
-            "name": "mrdth",
-            "email": "mrdth@zeventien.org"
+            "name": "Danny Hart",
+            "email": "danny.hart@insites-consulting.com"
         }
     ],
     "license": "MIT",
@@ -19,21 +19,21 @@
     },
     "autoload": {
             "psr-4": {
-                "MrDth\\DecipherApi\\": "src/"
+                "InsitesConsulting\\DecipherApi\\": "src/"
             }
         },
         "autoload-dev": {
             "psr-4": {
-                "MrDth\\DecipherApi\\Test\\": "tests/"
+                "InsitesConsulting\\DecipherApi\\Test\\": "tests/"
             }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "MrDth\\DecipherApi\\DecipherServiceProvider"
+                "InsitesConsulting\\DecipherApi\\DecipherServiceProvider"
             ],
             "aliases": {
-                "Decipher": "MrDth\\DecipherApi\\DecipherFacade"
+                "Decipher": "InsitesConsulting\\DecipherApi\\DecipherFacade"
             }
         }
     }

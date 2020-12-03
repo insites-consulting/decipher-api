@@ -1,8 +1,8 @@
 <?php
 
-namespace MrDth\DecipherApi\Factories\Api;
+namespace InsitesConsulting\DecipherApi\Factories\Api;
 
-use MrDth\DecipherApi\Factories\Client;
+use InsitesConsulting\DecipherApi\Factories\Client;
 
 class SurveyData
 {
