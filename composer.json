@@ -7,7 +7,7 @@
             "email": "danny.hart@insites-consulting.com"
         }
     ],
-    "license": "MIT",
+    "license": "proprietary",
     "require": {
         "ext-json": "*",
         "guzzlehttp/guzzle": "^7.0"
