@@ -44,18 +44,11 @@ class SurveyData
     public function post(array $fields, string $return_format)
     {
         $data = [
-            'json' => [
-                'survey' => "$this->server_directory/$this->survey_id",
-                'fields' => $fields,
-                'format' => $return_format
-            ]
+            'fields' => $fields,
+            'format' => $return_format
         ];
 
-        if (isset($this->condition)) {
-            $data['json']['cond'] = $this->condition;
-        }
-
-        $response = $this->client->post("surveys/$this->survey_id/data", $data);
+        $response = $this->client->post($this->buildEndpoint([],$return_format), ['json' => $data]);
 
         return (string) $response->getBody();
     }
