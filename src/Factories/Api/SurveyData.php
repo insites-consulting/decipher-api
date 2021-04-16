@@ -55,7 +55,7 @@ class SurveyData
             $data['json']['cond'] = $this->condition;
         }
 
-        $response = $this->client->post("surveys/survey/data", $data);
+        $response = $this->client->post("surveys/$this->survey_id/data", $data);
 
         return (string) $response->getBody();
     }
