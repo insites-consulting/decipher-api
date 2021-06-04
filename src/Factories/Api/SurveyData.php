@@ -47,8 +47,12 @@ class SurveyData
             'fields' => $fields,
             'format' => $return_format
         ];
-
-        $response = $this->client->post($this->buildEndpoint([],$return_format), ['json' => $data]);
+        
+        if (isset($this->condition)) {
+            $data['cond'] = $this->condition;
+        }
+        
+        $response = $this->client->post("surveys/$this->server_directory/$this->survey_id/data", ['json' => $data]);
 
         return (string) $response->getBody();
     }
@@ -67,6 +71,4 @@ class SurveyData
 
         return $endpoint;
     }
-
-
 }
