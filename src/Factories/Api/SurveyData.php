@@ -27,34 +27,34 @@ class SurveyData
         return $this;
     }
 
-    public function get(array $fields, string $return_format)
+    public function get(array $fields, string $return_format, bool $raw = false)
     {
         $endpoint = $this->buildEndpoint($fields, $return_format);
 
         // As URLs have a max length, if the endpoint is large, defer to a POST instead
         if (strlen($endpoint) > 800) {
-            return $this->post($fields, $return_format);
+            return $this->post($fields, $return_format, $raw);
         }
 
         $response = $this->client->get($endpoint);
 
-        return (string) $response->getBody();
+        return $raw ? $response : (string) $response->getBody();
     }
 
-    public function post(array $fields, string $return_format)
+    public function post(array $fields, string $return_format, bool $raw = false)
     {
         $data = [
             'fields' => $fields,
             'format' => $return_format
         ];
-        
+
         if (isset($this->condition)) {
             $data['cond'] = $this->condition;
         }
-        
+
         $response = $this->client->post("surveys/$this->server_directory/$this->survey_id/data", ['json' => $data]);
 
-        return (string) $response->getBody();
+        return $raw ? $response : (string) $response->getBody();
     }
 
     protected function buildEndpoint($fields, $format)
