@@ -53,7 +53,7 @@ class Decipher
         return (new SurveyList($this->client))->fetch();
     }
 
-    public function getSurveyData(array $fields = ['all'], string $return_format = 'json')
+    public function getSurveyData(array $fields = ['all'], string $return_format = 'json', bool $raw = false)
     {
         $this->checkRequiredPropertiesExist();
 
@@ -63,7 +63,7 @@ class Decipher
             $client->setCondition($this->condition);
         }
 
-        return $client->get($this->prepareFields($fields), $return_format);
+        return $client->get($this->prepareFields($fields), $return_format, $raw);
     }
 
     public function getSurveyStructure($format = 'json')
