@@ -6,10 +6,18 @@ use InsitesConsulting\DecipherApi\Factories\Client;
 
 class SurveyData
 {
+    /** @var Client */
     private $client;
+    /** @var string */
     private $survey_id;
+    /** @var string */
     private $server_directory;
+    /** @var string */
     private $condition;
+    /** @var string */
+    private $start;
+    /** @var string */
+    private $end;
 
     /**
      * Inject HTTP Client
@@ -21,9 +29,21 @@ class SurveyData
         $this->server_directory = $server_directory;
     }
 
-    public function setCondition($condition)
+    public function setCondition($condition): SurveyData
     {
         $this->condition = $condition;
+        return $this;
+    }
+
+    public function setStartTime($start): SurveyData
+    {
+        $this->start = $start;
+        return $this;
+    }
+
+    public function setEndTime($end): SurveyData
+    {
+        $this->end = $end;
         return $this;
     }
 
@@ -52,12 +72,18 @@ class SurveyData
             $data['cond'] = $this->condition;
         }
 
+        foreach (['start', 'end'] as $prop) {
+            if (isset($this->$prop)) {
+                $data[$prop] = $this->$prop;
+            }
+        }
+
         $response = $this->client->post("surveys/$this->server_directory/$this->survey_id/data", ['json' => $data]);
 
         return $raw ? $response : (string) $response->getBody();
     }
 
-    protected function buildEndpoint($fields, $format)
+    protected function buildEndpoint($fields, $format): string
     {
         $endpoint = "surveys/$this->server_directory/$this->survey_id/data?format=$format";
 
@@ -67,6 +93,12 @@ class SurveyData
 
         if (isset($this->condition)) {
             $endpoint .= '&cond=' . urlencode($this->condition);
+        }
+
+        foreach (['start', 'end'] as $prop) {
+            if (isset($this->$prop)) {
+                $endpoint .= "&$prop=" . $this->$prop;
+            }
         }
 
         return $endpoint;
