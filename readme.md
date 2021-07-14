@@ -77,5 +77,8 @@ try {
 - setSurveyId(int $id) - Set the ID of the current survey to work with.
 - setCondition(string $condition) - Condition required to retrieve the participant. This is a Python condition as if you would enter in survey logic or crosstabs. For example, “qualified and q3.r2” retrieves only participants that were qualified and answered q3 as r2.
 - getSurveyStructure(string $format) - Retrieve the structure of available questions for a survey, returning htem in the specified format.  Valid formats are: html, json, text, tab
-- getSurveyData(array $fields = ['all'], string $format = 'json') - Retrieve the responses to the question IDs passed in $fields from Decipher.  Note: uuid & status fields will always be returned. Any condition set using ::setCondition() will be applied
+- getSurveyData(array $fields = ['all'], string $return_format = 'json', bool $raw = false, $start = null, $end = null) - Retrieve the responses to the question IDs passed in $fields from Decipher.  Note: uuid & status fields will always be returned.<br>
+  Setting $raw to true will result in the raw Guzzle response object being returned, rather than $response->getBody().<br>
+  $start & $end can be set to ISO 8601 formatted datestrings (using Carbons toIso8601ZuluString() method, for example) to limit date range for responses returned.<br>
+  Any condition set using ::setCondition() will be applied
 - getSurveyFile(string $filename) - Retrieve the survey file called $filename as a string. 
