@@ -52,4 +52,14 @@ class ClientTest extends TestCase
             new Client('https://api.cintworks.net', 'thisisafakekey')
         );
     }
+
+    /** @test */
+    public function it_allows_a_connection_timeout_to_be_set()
+    {
+        $client = new Client('https://api.cintworks.net', 'thisisafakekey');
+        $this->assertEquals(0, $client->getTimeout());
+
+        $client->setTimeout(60);
+        $this->assertEquals(60, $client->getTimeout());
+    }
 }
