@@ -13,8 +13,8 @@
         "guzzlehttp/guzzle": "^7.0"
     },
     "require-dev": {
-        "orchestra/testbench": "~6.0",
-        "phpunit/phpunit": "^9.0",
+        "orchestra/testbench": "~9.0",
+        "phpunit/phpunit": "^10.0",
         "kint-php/kint": "^3.1"
     },
     "autoload": {
